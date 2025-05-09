@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { MessageCircle } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -18,32 +19,72 @@ const Hero = () => {
               transcripts and providing personalized recommendations based on
               prerequisites, reviews, and past performance.
             </p>
+            <p className="text-lg md:text-xl text-gray-600 mb-8 md:pr-10 leading-relaxed">
+              <span className="font-semibold text-unimate-500">Ask questions</span> about subject assessments or{" "}
+              <span className="font-semibold text-unimate-500">compare different subjects</span> with our AI chatbot
+              to make informed decisions about your academic path.
+            </p>
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
               <Button className="bg-unimate-500 hover:bg-unimate-600 text-white text-lg px-6 py-6 h-auto rounded-lg w-full sm:w-auto">
                 Get Early Access
               </Button>
-              <Button variant="outline" className="border-unimate-500 text-unimate-500 hover:bg-unimate-50 text-lg px-6 py-6 h-auto rounded-lg w-full sm:w-auto">
-                Learn More
+              <Button variant="outline" className="border-unimate-500 text-unimate-500 hover:bg-unimate-50 text-lg px-6 py-6 h-auto rounded-lg w-full sm:w-auto flex items-center">
+                <MessageCircle className="mr-2" />
+                Try Demo Chat
               </Button>
+            </div>
+            <div className="text-sm text-gray-500 mt-6">
+              <p>No sign-up required. Free to use.</p>
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-          <div className="relative animate-float">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-unimate-300 to-unimate-500 rounded-lg blur opacity-30"></div>
-            <div className="relative bg-white p-6 rounded-lg shadow-xl">
-              <div className="bg-gradient-to-r from-unimate-100 to-unimate-200 p-4 rounded-md mb-4">
-                <img
-                  src="/lovable-uploads/68a7f19c-23a8-4976-8d08-acec778551c2.png"
-                  alt="UniMate Mascot"
-                  className="h-24 mx-auto"
-                />
+        
+        <div className="w-full lg:w-1/2 flex justify-center animate-float">
+          <div className="relative w-full max-w-md">
+            <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-2 h-2 bg-red-500 rounded-full mr-1"></div>
+                <div className="w-2 h-2 bg-yellow-500 rounded-full mr-1"></div>
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div className="ml-4 text-sm text-gray-500">UniMate Analysis</div>
               </div>
-              <div className="space-y-3">
-                <div className="h-4 bg-gray-100 rounded-full w-3/4"></div>
-                <div className="h-4 bg-gray-100 rounded-full"></div>
-                <div className="h-4 bg-gray-100 rounded-full w-5/6"></div>
-                <div className="h-8 bg-unimate-100 rounded-md w-full mt-4"></div>
+              
+              <div className="bg-gray-50 rounded-lg p-4 mb-4">
+                <div className="h-2 bg-unimate-soft-purple rounded w-3/4 mb-2"></div>
+                <div className="h-2 bg-unimate-soft-purple rounded w-1/2 mb-2"></div>
+                <div className="h-2 bg-unimate-soft-purple rounded w-2/3"></div>
+              </div>
+              
+              <div className="border-t border-gray-100 pt-4">
+                <p className="font-medium text-sm text-gray-700 mb-2">Eligible Subjects</p>
+                <div className="space-y-2">
+                  <div className="flex justify-between">
+                    <div className="text-sm text-gray-600">COMP3000</div>
+                    <div className="text-xs text-green-600 font-medium">Recommended</div>
+                  </div>
+                  <div className="flex justify-between">
+                    <div className="text-sm text-gray-600">MATH2023</div>
+                    <div className="text-xs text-unimate-purple font-medium">High Rating</div>
+                  </div>
+                  <div className="flex justify-between">
+                    <div className="text-sm text-gray-600">ECON1101</div>
+                    <div className="text-xs text-gray-500 font-medium">Breadth Requirement</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-unimate-soft-purple mt-4 p-3 rounded-lg">
+                <div className="flex items-center justify-between">
+                  <div className="text-xs text-unimate-deep-purple font-medium">
+                    Progress to Degree
+                  </div>
+                  <div className="text-xs text-unimate-deep-purple font-bold">
+                    74%
+                  </div>
+                </div>
+                <div className="w-full bg-white h-2 rounded-full mt-1">
+                  <div className="bg-gradient-to-r from-unimate-purple to-unimate-deep-purple h-2 rounded-full w-3/4"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -57,15 +98,15 @@ const Hero = () => {
             <p className="text-gray-500">Students</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl font-bold text-gray-700">25+</p>
-            <p className="text-gray-500">Universities</p>
+            <p className="text-3xl font-bold text-gray-700">1</p>
+            <p className="text-gray-500">University</p>
           </div>
           <div className="text-center">
             <p className="text-3xl font-bold text-gray-700">95%</p>
             <p className="text-gray-500">Satisfaction</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl font-bold text-gray-700">50,000+</p>
+            <p className="text-3xl font-bold text-gray-700">10,000+</p>
             <p className="text-gray-500">Courses Analyzed</p>
           </div>
         </div>

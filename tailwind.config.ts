@@ -74,6 +74,9 @@ export default {
 					700: '#003080',
 					800: '#001d4d',
 					900: '#000a1a',
+					'soft-purple': '#E5DEFF',
+					'purple': '#9b87f5',
+					'deep-purple': '#6E59A5',
 				}
 			},
 			borderRadius: {
