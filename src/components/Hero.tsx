@@ -20,7 +20,7 @@ const Hero = () => {
               prerequisites, reviews, and past performance.
             </p>
             <p className="text-lg md:text-xl text-gray-600 mb-8 md:pr-10 leading-relaxed">
-              <span className="font-semibold text-unimate-500">Ask questions</span> about subject assessments or{" "}
+              <span className="font-semibold text-unimate-500">Ask questions</span> about subjects or{" "}
               <span className="font-semibold text-unimate-500">compare different subjects</span> with our AI chatbot
               to make informed decisions about your academic path.
             </p>
