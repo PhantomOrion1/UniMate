@@ -1,24 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>UniMate</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniMate - Course Planning Assistant</title>
+    <meta name="description" content="UniMate helps university students plan their courses with AI-powered insights" />
+    <meta name="author" content="UniMate" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/lovable-uploads/68a7f19c-23a8-4976-8d08-acec778551c2.png" />
+    <link rel="apple-touch-icon" href="/lovable-uploads/68a7f19c-23a8-4976-8d08-acec778551c2.png" />
+
+    <meta property="og:title" content="UniMate - Smart Course Planning" />
+    <meta property="og:description" content="Plan your university courses smarter with UniMate" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://unimate.io/og-image.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@unimate" />
+    <meta name="twitter:image" content="https://unimate.io/og-image.png" />
+
+    <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
       // MIT License
       // https://github.com/rafgraph/spa-github-pages
-      var pathSegmentsToKeep = 0;
-
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
     </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+    <script type="module" crossorigin src="/assets/index-BJlRI80n.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DgstgnI5.css">
   </head>
+
   <body>
+    <div id="root"></div>
   </body>
-</html> 
+</html>
