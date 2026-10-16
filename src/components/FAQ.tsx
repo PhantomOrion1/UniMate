@@ -1,4 +1,3 @@
-
 import {
   Accordion,
   AccordionContent,
@@ -6,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const FAQ = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -16,7 +16,6 @@ const FAQ = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(sectionRef.current!);
         }
       },
       {
@@ -39,17 +38,17 @@ const FAQ = () => {
     {
       question: "How does UniMate protect my personal data?",
       answer:
-        "UniMate prioritizes your privacy. We only store anonymized academic information without any personally identifying details. Your transcript data is used to improve our recommendations but is never linked back to you individually.",
+        "UniMate prioritises your privacy. We only store anonymised academic information without any personally identifying details. Your transcript data is used to improve our recommendations but is never linked back to you individually.",
     },
     {
       question: "Is UniMate available for all universities?",
       answer:
-        "We're rapidly expanding our university coverage. Currently, UniMate supports major universities across Australia, with plans to expand internationally. If your university isn't supported yet, let us know and we'll prioritize adding it.",
+        "Currently, UniMate is being implemented at the University of Melbourne, University of New South Wales, and Monash University. We're working closely with these institutions to ensure the best possible experience before expanding to other universities. If your university isn't supported yet, join our waitlist and we'll notify you when we expand to your institution.",
     },
     {
       question: "How accurate are the subject recommendations?",
       answer:
-        "UniMate's recommendations are based on three key factors: your academic history, aggregated performance data, and sentiment analysis from student reviews. Our AI continuously improves as more students use the platform, making recommendations increasingly accurate over time.",
+        "Our recommendations are derived from comprehensive analysis of course structures, prerequisites, and aggregated student review data. While we strive for accuracy, recommendations should be considered as guidance rather than definitive advice.",
     },
     {
       question: "Will UniMate always be free?",
@@ -108,9 +107,9 @@ const FAQ = () => {
         >
           <p className="text-gray-600">
             Don't see your question here?{" "}
-            <a href="#" className="text-unimate-500 hover:text-unimate-600 underline">
+            <Link to="/contact" className="text-unimate-500 hover:text-unimate-600 underline">
               Contact us
-            </a>
+            </Link>
           </p>
         </div>
       </div>

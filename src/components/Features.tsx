@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import { BookOpen, Search, GraduationCap, Users } from 'lucide-react';
 
@@ -96,17 +95,17 @@ const Features = () => {
     {
       icon: Search,
       title: "Subject Recommendations",
-      description: "Receive personalized course suggestions based on your academic history, student reviews, and performance data."
+      description: "Receive personalised course suggestions based on your academic history, student reviews, and performance data."
     },
     {
       icon: GraduationCap,
       title: "Academic Planning",
-      description: "Visualize your academic roadmap and ensure you're on track to meet all graduation requirements."
+      description: "Visualise your academic roadmap and ensure you're on track to meet all graduation requirements."
     },
     {
       icon: Users,
       title: "Community Insights",
-      description: "Benefit from aggregated anonymized data and sentiment analysis from student discussions."
+      description: "Benefit from aggregated anonymised data and sentiment analysis from student discussions."
     }
   ];
 

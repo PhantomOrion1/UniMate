@@ -1,6 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -15,8 +15,8 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 md:pr-10 leading-relaxed">
-              UniMate helps university students choose the right courses by analyzing
-              transcripts and providing personalized recommendations based on
+              UniMate helps university students choose the right courses by analysing
+              transcripts and providing personalised recommendations based on
               prerequisites, reviews, and past performance.
             </p>
             <p className="text-lg md:text-xl text-gray-600 mb-8 md:pr-10 leading-relaxed">
@@ -25,9 +25,11 @@ const Hero = () => {
               to make informed decisions about your academic path.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button className="bg-unimate-500 hover:bg-unimate-600 text-white text-lg px-6 py-6 h-auto rounded-lg w-full sm:w-auto">
-                Get Early Access
-              </Button>
+              <Link to="/waitlist">
+                <Button className="bg-unimate-500 hover:bg-unimate-600 text-white text-lg px-6 py-6 h-auto rounded-lg w-full sm:w-auto">
+                  Get Early Access
+                </Button>
+              </Link>
               <Button variant="outline" className="border-unimate-500 text-unimate-500 hover:bg-unimate-50 text-lg px-6 py-6 h-auto rounded-lg w-full sm:w-auto flex items-center">
                 <MessageCircle className="mr-2" />
                 Try Demo Chat
@@ -94,20 +96,85 @@ const Hero = () => {
       <div className="container mx-auto px-4 mt-16">
         <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
           <div className="text-center">
-            <p className="text-3xl font-bold text-gray-700">15,000+</p>
-            <p className="text-gray-500">Students</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl font-bold text-gray-700">1</p>
-            <p className="text-gray-500">University</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl font-bold text-gray-700">95%</p>
-            <p className="text-gray-500">Satisfaction</p>
-          </div>
-          <div className="text-center">
             <p className="text-3xl font-bold text-gray-700">10,000+</p>
-            <p className="text-gray-500">Courses Analyzed</p>
+            <p className="text-gray-500">Subjects Mapped</p>
+          </div>
+          <div className="text-center">
+            <p className="text-3xl font-bold text-gray-700">94%</p>
+            <p className="text-gray-500">Satisfaction Rate</p>
+          </div>
+          <div className="text-center">
+            <p className="text-3xl font-bold text-gray-700">100+</p>
+            <p className="text-gray-500">Majors Covered</p>
+          </div>
+        </div>
+
+        <div className="mt-16 overflow-hidden">
+          <div className="flex animate-scroll gap-24">
+            <div className="flex shrink-0 items-center gap-24">
+              <img
+                src="/assets/unswlogo.png"
+                alt="UNSW Sydney"
+                className="h-20 w-auto"
+              />
+              <img
+                src="/assets/MAPlogo.png"
+                alt="Melbourne Accelerator Program"
+                className="h-24 w-auto"
+              />
+              <img
+                src="/assets/innovatedlogo.png"
+                alt="Melbourne InnovateEd"
+                className="h-16 w-auto"
+              />
+              <img
+                src="/assets/unimelblogo.png"
+                alt="University of Melbourne"
+                className="h-24 w-auto"
+              />
+              <img
+                src="/assets/Monash_University_logo.png"
+                alt="Monash University"
+                className="h-16 w-auto"
+              />
+              <img
+                src="/assets/startmatelogo.png"
+                alt="Startmate"
+                className="h-12 w-auto"
+              />
+            </div>
+            <div className="flex shrink-0 items-center gap-24">
+              <img
+                src="/assets/unswlogo.png"
+                alt="UNSW Sydney"
+                className="h-20 w-auto"
+              />
+              <img
+                src="/assets/MAPlogo.png"
+                alt="Melbourne Accelerator Program"
+                className="h-24 w-auto"
+              />
+              <img
+                src="/assets/innovatedlogo.png"
+                alt="Melbourne InnovateEd"
+                className="h-16 w-auto"
+              />
+              <img
+                src="/assets/unimelblogo.png"
+                alt="University of Melbourne"
+                className="h-24 w-auto"
+              />
+              <img
+                src="/assets/Monash_University_logo.png"
+                alt="Monash University"
+                className="h-16 w-auto"
+              />
+              <img
+                src="/assets/startmatelogo.png"
+                alt="Startmate"
+                className="h-12 w-auto"
+              />
+            </div>
           </div>
         </div>
       </div>

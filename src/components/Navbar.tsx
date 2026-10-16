@@ -1,7 +1,7 @@
-
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <img
-            src="/lovable-uploads/68a7f19c-23a8-4976-8d08-acec778551c2.png"
+            src="/assets/68a7f19c-23a8-4976-8d08-acec778551c2.png"
             alt="UniMate Logo"
             className="h-10 w-auto"
           />
@@ -53,9 +53,11 @@ const Navbar = () => {
           <a href="#faq" className="text-gray-700 hover:text-unimate-500 transition-colors">
             FAQ
           </a>
-          <Button className="bg-unimate-500 hover:bg-unimate-600 text-white">
-            Get Early Access
-          </Button>
+          <Link to="/waitlist">
+            <Button className="bg-unimate-500 hover:bg-unimate-600 text-white">
+              Get Early Access
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -95,9 +97,11 @@ const Navbar = () => {
           >
             FAQ
           </a>
-          <Button className="bg-unimate-500 hover:bg-unimate-600 text-white w-full">
-            Get Early Access
-          </Button>
+          <Link to="/waitlist" onClick={() => setMobileMenuOpen(false)}>
+            <Button className="bg-unimate-500 hover:bg-unimate-600 text-white w-full">
+              Get Early Access
+            </Button>
+          </Link>
         </div>
       )}
     </nav>
